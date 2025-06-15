@@ -1,54 +1,46 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './SellForm.css';
 
-const SellForm = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    batch: '',
-    room: '',
-    image: null,
-    title: '',
-    description: '',
-    price: '',
-    borrowPrice: '',
-  });
-
-  const handleChange = (e) => {
-    const { name, value, files } = e.target;
-    if (name === 'image') {
-      const file = files[0];
-      if (file && file.size > 2 * 1024 * 1024) {
-        alert('Image must be less than 2MB');
-        return;
-      }
-      setFormData({ ...formData, image: file });
-    } else {
-      setFormData({ ...formData, [name]: value });
-    }
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Form Data Submitted:', formData);
-    // Here you would handle the API or data storage
-  };
-
+function SellForm() {
   return (
-    <div className="sell-form-container">
-      <h2>Sell Your Stuff</h2>
-      <form onSubmit={handleSubmit} className="sell-form">
-        <input type="text" name="name" placeholder="Your Name" required onChange={handleChange} />
-        <input type="text" name="batch" placeholder="Batch Year (e.g. 2025)" required onChange={handleChange} />
-        <input type="text" name="room" placeholder="Room No" required onChange={handleChange} />
-        <input type="file" name="image" accept="image/*" required onChange={handleChange} />
-        <input type="text" name="title" placeholder="Product Title" required onChange={handleChange} />
-        <textarea name="description" placeholder="Product Description" required onChange={handleChange} />
-        <input type="number" name="price" placeholder="Price (₹)" required onChange={handleChange} />
-        <input type="number" name="borrowPrice" placeholder="Borrow Price (₹)" onChange={handleChange} />
-        <button type="submit">Submit</button>
+    <div className="sell-container">
+      <h1 className="sell-title">Sell Your Item</h1>
+      <p className="sell-subtitle">List your item and connect with buyers on your campus</p>
+
+      <form className="sell-form">
+        <fieldset className="section">
+          <legend>Seller Information</legend>
+          <input type="text" placeholder="Your Name" required />
+          <input type="text" placeholder="Phone Number" required />
+          <input type="text" placeholder="Your Location (e.g., Hostel R1, Block A)" required />
+        </fieldset>
+
+        <fieldset className="section">
+          <legend>Product Information</legend>
+          <input type="text" placeholder="Product Name (e.g., iPhone 13)" required />
+          <textarea placeholder="Description" required />
+          <div className="row">
+            <input type="number" placeholder="Price ₹" required />
+            <input type="text" placeholder="Age (e.g., 6 months)" required />
+            <select required>
+              <option value="">Select Category</option>
+              <option value="Electronics">Electronics</option>
+              <option value="Books">Books</option>
+              <option value="Furniture">Furniture</option>
+              <option value="Others">Others</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <fieldset className="section">
+          <legend>Product Image</legend>
+          <input type="file" accept="image/png, image/jpeg" required />
+        </fieldset>
+
+        <button className="submit-btn" type="submit">List My Item</button>
       </form>
     </div>
   );
-};
+}
 
 export default SellForm;

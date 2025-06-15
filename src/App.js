@@ -13,7 +13,6 @@ export default function App() {
           <Link to="/product-detail">Products</Link>
           <Link to="/sell">Sell Stuff</Link>
           <Link to="/about-us">About Us</Link>
-          <Link to="/contact-us">Contact Us</Link>
         </nav>
 
         <Routes>

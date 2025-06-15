@@ -1,31 +1,55 @@
 import React from 'react';
-import './AboutUs.css'; 
+import './AboutUs.css';
 
 function AboutUs() {
   return (
-    <div className="about-us-container">
-      <div className="about-us-content">
-        <h1 className="heading">About CampusCart</h1>
-        <p className="description">
-          CampusCart is an OLX-style marketplace designed specifically for campus communities. Whether you're looking to buy, sell, or exchange items within your college, CampusCart makes it easy and secure.
-        </p>
-        
-        <h2 className="sub-heading">Our Mission</h2>
-        <p className="description">
-          Our mission is to create a hassle-free platform for students to trade goods and services within their campus. We aim to build a trustworthy and convenient community-driven marketplace.
-        </p>
+    <div className="aboutus-container">
+      <div className="aboutus-inner">
+        <section className="aboutus-hero">
+          <h1>About CampusCart</h1>
+          <p>Your one-stop marketplace for all things on campus – from books and electronics to furniture and more!</p>
+        </section>
 
-        <h2 className="sub-heading">Why CampusCart?</h2>
-        <ul className="features-list">
-          <li>Easy to list and browse items.</li>
-          <li>Connect with other students safely within your campus.</li>
-          <li>No commission or hidden charges.</li>
-          <li>Quick and direct transactions.</li>
-        </ul>
+        <section className="aboutus-section">
+          <h2>🚀 Our Mission</h2>
+          <p>
+            CampusCart is built by students, for students. We aim to make it easy to buy, sell, and trade products within your college community.
+            No more shady deals – just safe and convenient transactions among trusted peers.
+          </p>
+        </section>
 
-        <p className="description">
-          Built by students, for students, CampusCart is your go-to app for all on-campus trading needs.
-        </p>
+        <section className="aboutus-section team">
+          <h2>👨‍💻 Meet the Team</h2>
+          <div className="team-cards">
+            <div className="team-member">
+              <img src="/Assets/IMG_7380.jpg" alt="Balajee" />
+              <h4>Balajee</h4>
+              <p>Founder & Developer</p>
+            </div>
+          </div>
+        </section>
+
+        <section className="aboutus-section features">
+          <h2>✨ Features</h2>
+          <ul>
+            <li>Buy & sell easily within your campus</li>
+            <li>Image upload for better listings</li>
+            <li>Category filters for quick browsing</li>
+            <li>Contact sellers directly via phone</li>
+          </ul>
+        </section>
+
+        <section className="aboutus-section contact-newsletter">
+          <h2>📬 Stay Connected</h2>
+          <p>Have questions, suggestions or just want to say hi? Reach out to us!</p>
+          <form className="contact-form">
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <textarea placeholder="Message or Feedback..." rows="4" required />
+            <button type="submit">Send Message</button>
+          </form>
+          <p className="newsletter-note">Subscribe to get updates on new features and listings!</p>
+        </section>
       </div>
     </div>
   );
