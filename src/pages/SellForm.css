@@ -23,6 +23,26 @@
   margin-bottom: 25px;
 }
 
+.message {
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.message.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
 .sell-form {
   display: flex;
   flex-direction: column;
@@ -39,6 +59,32 @@
   font-size: 1.1rem;
   margin-bottom: 10px;
   color: #333;
+}
+
+.college-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #f0f8ff;
+  border-radius: 8px;
+  border: 1px solid #e3f2fd;
+}
+
+.college-info label {
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.college-display {
+  font-weight: 600;
+  color: #1a73e8;
+  background-color: #e3f2fd;
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: 1px solid #bbdefb;
 }
 
 input,
@@ -59,6 +105,7 @@ textarea:focus,
 select:focus {
   border-color: #1a73e8;
   outline: none;
+  background-color: #ffffff;
 }
 
 .row {
@@ -85,6 +132,11 @@ select:focus {
   transition: background-color 0.3s ease;
 }
 
-.submit-btn:hover {
+.submit-btn:hover:not(:disabled) {
   background-color: #1558b0;
+}
+
+.submit-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
 }

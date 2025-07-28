@@ -1,38 +1,4 @@
-.navbar {
-  color: white;
-  background-color: transparent;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.75rem 2rem;
-  font-size: 1.2rem;
-  position: fixed;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: auto;
-  max-width: 90%;
-  min-width: 600px;
-  border-radius: 30px;
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
-  background: rgba(0, 0, 0, 0.3); 
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  z-index: 1000;
-}
-.navbar a {
-  font-family: Georgia, serif;
-  font-weight: bold;
-  font-size: 1rem;
-  color: #ffffff;
-  text-decoration: none;
-  margin: 0 0.75rem;
-  transition: color 0.3s ease;
-}
 
-.navbar a:hover {
-  color: #ffcc00; 
-}
 
 
 .home {
@@ -127,6 +93,44 @@ p {
 
 .sell-button:hover {
   background-color: rgb(31, 31, 31);
+}
+
+.college-welcome {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.college-description {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.login-suggestion {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.login-suggestion p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  margin: 0;
+}
+
+.login-link {
+  background: none;
+  border: none;
+  color: #ffcc00;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.login-link:hover {
+  color: #e6b800;
 }
 
 .product-detail {

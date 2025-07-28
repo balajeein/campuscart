@@ -7,6 +7,7 @@ const products = [
       price: 1500,
       roomNo: 'R1-733',
       time: '33 min ago',
+      college: 'rishihood'
     },
     {
       id: 2,
@@ -16,6 +17,7 @@ const products = [
       price: 1200,
       roomNo: 'R1-114',
       time: '1 hour ago',
+      college: 'rishihood'
     },
     {
         id: 3,
@@ -25,6 +27,7 @@ const products = [
         price: 800,
         roomNo: 'R3-542',
         time: '1 hour ago',
+        college: 'ashoka'
       },
       {
         id: 4,
@@ -34,6 +37,7 @@ const products = [
         price: 88,
         roomNo: 'R1-204',
         time: '1 hour ago',
+        college: 'ashoka'
       },
 
       {
@@ -44,6 +48,7 @@ const products = [
         price: 999,
         roomNo: 'R2-101',
         time: '2 hours ago',
+        college: 'du'
       },
       {
         id: 6,
@@ -53,6 +58,7 @@ const products = [
         price: 600,
         roomNo: 'R3-220',
         time: '3 hours ago',
+        college: 'du'
       },
       {
         id: 7,
@@ -62,6 +68,7 @@ const products = [
         price: 700,
         roomNo: 'R2-314',
         time: '3 hours ago',
+        college: 'dtu'
       },
       {
         id: 8,
@@ -71,6 +78,7 @@ const products = [
         price: 299,
         roomNo: 'R1-502',
         time: '4 hours ago',
+        college: 'dtu'
       },
       {
         id: 9,
@@ -80,6 +88,7 @@ const products = [
         price: 450,
         roomNo: 'R2-422',
         time: '5 hours ago',
+        college: 'iit_delhi'
       },
       {
         id: 10,
@@ -89,6 +98,7 @@ const products = [
         price: 240,
         roomNo: 'R3-110',
         time: '6 hours ago',
+        college: 'iit_delhi'
       },
       {
         id: 11,
@@ -98,6 +108,7 @@ const products = [
         price: 350,
         roomNo: 'R3-421',
         time: '6 hours ago',
+        college: 'rishihood'
       },
       {
         id: 12,
@@ -107,6 +118,7 @@ const products = [
         price: 180,
         roomNo: 'R1-323',
         time: '6 hours ago',
+        college: 'ashoka'
       },
       {
         id: 13,
@@ -116,6 +128,7 @@ const products = [
         price: 950,
         roomNo: 'R2-611',
         time: '7 hours ago',
+        college: 'du'
       },
       {
         id: 14,
@@ -125,6 +138,7 @@ const products = [
         price: 1100,
         roomNo: 'R3-208',
         time: '8 hours ago',
+        college: 'dtu'
       }
   ];
   

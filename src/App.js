@@ -7,31 +7,33 @@ import SellForm from './pages/SellForm';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import { AuthProvider } from './context/AuthContext';
+import { CartProvider } from './context/CartContext';
 import Checkout from './pages/Checkout';
+import Cart from './pages/Cart';
+import CartIcon from './components/CartIcon';
+import Navbar from './components/Navbar';
 
 export default function App() {
   return (
     <AuthProvider>
-      <Router>
-        <div className="home-page">
-          <nav className="navbar">
-            <Link to="/">Home</Link>
-            <Link to="/product-detail">Products</Link>
-            <Link to="/sell">Sell Stuff</Link>
-            <Link to="/about-us">About Us</Link>
-          </nav>
+      <CartProvider>
+        <Router>
+          <div className="home-page">
+            <Navbar />
 
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/sell" element={<SellForm />} />
-            <Route path="/about-us" element={<AboutUs />} />
-            <Route path="/product-detail" element={<ProductDetail />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<Signup />} />
-            <Route path="/checkout" element={<Checkout />} />
-          </Routes>
-        </div>
-      </Router>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/sell" element={<SellForm />} />
+              <Route path="/about-us" element={<AboutUs />} />
+              <Route path="/product-detail" element={<ProductDetail />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/checkout" element={<Checkout />} />
+              <Route path="/cart" element={<Cart />} />
+            </Routes>
+          </div>
+        </Router>
+      </CartProvider>
     </AuthProvider>
   );
 }

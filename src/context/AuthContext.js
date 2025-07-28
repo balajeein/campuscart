@@ -19,24 +19,24 @@ export const AuthProvider = ({ children }) => {
     }
   }, [user]);
 
-  const login = (username, password) => {
+  const login = (username, password, college) => {
     const users = JSON.parse(localStorage.getItem(USERS_KEY)) || [];
     const found = users.find(u => u.username === username && u.password === password);
     if (found) {
-      setUser({ username });
+      setUser({ username, college });
       return true;
     }
     return false;
   };
 
-  const signup = (username, password) => {
+  const signup = (username, password, college) => {
     let users = JSON.parse(localStorage.getItem(USERS_KEY)) || [];
     if (users.find(u => u.username === username)) {
       return false; // Username already exists
     }
-    users.push({ username, password });
+    users.push({ username, password, college });
     localStorage.setItem(USERS_KEY, JSON.stringify(users));
-    setUser({ username });
+    setUser({ username, college });
     return true;
   };
 
