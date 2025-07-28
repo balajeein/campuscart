@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './SellForm.css';
+import { useAuth } from '../context/AuthContext';
+import { useNavigate } from 'react-router-dom';
 
 function SellForm() {
+  const { user } = useAuth();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!user) {
+      navigate('/login');
+    }
+  }, [user, navigate]);
+
   return (
     <div className="sell-container">
       <h1 className="sell-title">Sell Your Item</h1>
